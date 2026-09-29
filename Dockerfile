@@ -9,7 +9,14 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+
+# Installazione esplicita con versioni fisse
+RUN pip install --no-cache-dir \
+    transformers==4.37.2 \
+    TTS==0.22.0 \
+    fastapi==0.115.6 \
+    uvicorn==0.34.0 \
+    pydantic==2.10.4
 
 COPY app.py .
 
