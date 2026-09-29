@@ -1,5 +1,5 @@
-TTS==0.22.0
 transformers==4.37.2
+TTS==0.22.0
 fastapi==0.115.6
 uvicorn==0.34.0
 pydantic==2.10.4
